@@ -55,6 +55,8 @@ class Sponsor < ActiveRecord::Base
         },
         :storage => :s3,
         :s3_credentials => Rails.configuration.x.s3,
+        :hash_secret => '3fc75b1586cec00063a7a32b51fde796137d19d793cc0d0c1db96c3a013aff816ae91cf51e8c86d02ad62ba57c4b4c75b6d13dc890aa5b4ec85bb9640a5d8361',
+        :path => "/account/8/sponsors/:id/:hash_:style.:extension",
         :default_url => "/images/sponsor-default.png"
     end
   end
