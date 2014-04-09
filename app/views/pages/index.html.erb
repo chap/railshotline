@@ -14,26 +14,20 @@
           </div>
         <% end %>
         <div id="stats-summary">
-          <h3 id="volunteers-on-call">
+          <h3 id="volunteers-on-call" style="border:none;margin-top:50px;">
             <%= @operators.length %>
             <span>Volunteer<%= 's' unless @operators.length == 1 %><br /> on call now</span>
           </h3>
-          Phone tech and minutes<br />
-          <a href="http://www.twilio.com/" style="text: decoration: none; display: inline-block; width: 135px; height: 0; overflow: hidden; padding-top: 44px; background: url(http://www.local.twilio.com/packages/company/img/logos_icon_poweredbylarge.png) no-repeat;">powered by twilio™</a>
-          <br /><br />
-          Hosting donated by<br />
-          <%= link_to image_tag('https://d1lpkba4w1baqt.cloudfront.net/heroku-logo-light-88x31.png'), 'http://heroku.com' %>
-          <% if sponsors_active? %>
-            <h3 id="time-remaining">
-              <% if minutes_remaining > 120 %>
-                <%= friendly_minutes_remaining(minutes_remaining) %>
-                <span>Hours remaining</span>
-              <% else %>
-                <%= minutes_remaining %>
-                <span>Minutes remaining</span>
-              <% end %>
-            </h3>
-          <% end %>
+          <div style="font-size:11px; color: #666; text-align:center;">
+            phone tech and minutes<br />
+            <%= link_to image_tag('//www.twilio.com/packages/company/img/logos_icon_poweredbylarge.png'), 'http://twilio.com' %>
+            <br /><br />
+            hosting by<br />
+            <%= link_to image_tag('//d1lpkba4w1baqt.cloudfront.net/heroku-logo-light-88x31.png'), 'http://heroku.com' %>
+
+            <br /><br />
+            <%= link_to 'view past supporters', sponsors_path %>
+          </div>
         </div>
       </div></div>
 
